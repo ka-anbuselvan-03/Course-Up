@@ -20,16 +20,23 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.post('/sign_up', function(req,res){
-	var name = req.body.name;
-	var email =req.body.email;
-	var pass = req.body.password;
-	var phone =req.body.phone;
+	
+	var FirstName = req.body.FirstName;
+	var LastName = req.body.LastName;
+	var username = req.body.usename;
+	var email = req.body.email;
+	var password = req.body.password;
+	var password2 = req.body.password2;
+	
 
 	var data = {
-		"name": name,
+		"FirstName": FirstName,
+		"LastName": LastName,
+		"username": username,
 		"email":email,
-		"password":pass,
-		"phone":phone
+		"password":password,
+		"password2":password2,
+		
 	}
 
 app.use('/public',express.static(__dirname +"/public"));
@@ -39,7 +46,7 @@ db.collection('details').insertOne(data,function(err, collection){
 			
 	});
 		
-	return res.redirect(`${req.baseUrl}/signup_succes.html`);;
+	return res.redirect(`${req.baseUrl}/Login.html`);;
 })
 
 app.use('/public',express.static(__dirname +"/public"));
@@ -47,7 +54,7 @@ app.get('/',function(req,res){
 res.set({
 	'Access-control-Allow-Origin': '*'
 	});
-return res.redirect(`${req.baseUrl}/public/index.html`);
+return res.redirect(`${req.baseUrl}/public/Register.html`);
 }).listen(3000)
 
 
