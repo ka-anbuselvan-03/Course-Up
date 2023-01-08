@@ -1,42 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Form - MongoDB</title>
+    <title>Course Website</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--ICONSCOUT CDN for menu-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--GOOGLE FONTS (MONTSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!--SWIPER JS FOR STUDENTS TESTIMONIAL-->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+
+  <!--CSS FOR SIMPLE BACKGROUND TEXTURE-->
+  <style>
+    body {
+        background-image: url("./images/bkgd-texture.png");
+        width: 100%;
+    }
+  </style>
+
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
+    <!-------START OF THE NAV BAR-------->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html"><h2>COURSE UP</h2></a>
+            <u1 class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact.</a></li>
+            </u1>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+        <!-------END OF THE NAV BAR-------->
+    
+        <!------------------------START OF THE HEADER-------------------------->
+        <header>
+            <div class="container header_container">
+                <div class="header_left">
+                    <h1>Grow your skills to advance your career path</h1>
+                    <p>
+                        The learning platform helps you to connect with people 
+                        and makes the education easier and simpler
+                    </p>
+                    <a href="Register.html" class="btn btn-primary">Get started</a>
+                </div>
+                
+                <div class="header_right">
+                    <div class="header_right-image">
+                        <img src="./images/header.jpg">
+                    </div>
+                </div>
 
             </div>
-            <div class="col-md-6 main">
-                <form action="/sign_up" method="POST">
-                    <h2>SignUp Form</h2>
-                    <input type="text" class="box" id="name" name="name" placeholder="Name" required />
-                    <br>
-                    <input type="text" class="box" id="email" name="email" placeholder="Email" required />
-                    <br>
-                    <input type="text" class="box" id="phno" name="phno" placeholder="Mobile" required />
-                    <br>
-                    <input type="text" class="box" id="password" name="password" placeholder="Password" required />
-                    <br>
-                    <input type="submit" value="Submit" id="submit" />
-                </form>
+        </header>
+        <!--------------------------END OF THE HEADER---------------------------->
+
+
+                <!------------------------START OF THE SECTION CATEGORIES-------------------------->
+        <section class="categories">
+            <div class="container categories_container">
+                <div class="categories_left">
+                    <h1>Categories</h1>
+                    <p>
+                        Here comes the new and exicting web dev ,ml ,al courses for your 
+                        idea of living. We say learn and live , not live for learning
+                    </p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="categories_right">
+                    <article class="category">
+                        <span class="category_icon"><i class="uil uil-bitcoin-circle"></i></span>
+                        <h5>Blockchain</h5>    
+                        <p>Do your blockchain learning in your own friendly environment</p>
+                    </article>
+                    <article class="category">
+                        <span class="category_icon"><i class="uil uil-palette"></i></span>
+                        <h5>Graphic Design</h5>    
+                        <p>Do your blockchain learning in your own friendly environment</p>
+                    </article>
+                    <article class="category">
+                        <span class="category_icon"><i class="uil uil-usd-circle"></i></span>
+                        <h5>Finance</h5>    
+                        <p>Do your blockchain learning in your own friendly environment</p>
+                    </article>
+                    <article class="category">
+                        <span class="category_icon"><i class="uil uil-megaphone"></i></span>
+                        <h5>Marketing</h5>    
+                        <p>Do your blockchain learning in your own friendly environment</p>
+                    </article>
+                    <article class="category">
+                        <span class="category_icon"><i class="uil uil-music"></i></span>
+                        <h5>Music</h5>    
+                        <p>Do your blockchain learning in your own friendly environment</p>
+                    </article>
+                    <article class="category">
+                        <span class="category_icon"><i class="uil uil-puzzle-piece"></i></span>
+                        <h5>Business</h5>    
+                        <p>Do your blockchain learning in your own friendly environment</p>
+                    </article>
+                </div>
             </div>
-            <div class="col-md-3">
+        </section>
+
+                                    <!------------------------END OF THE SECTION CATEGORIES-------------------------->
+
+                <!------------------------START OF THE SECTION COURSES-------------------------->
+                <section class="courses">
+                    <h2>Popular Courses</h2>
+                    <div class="container courses_container">
+                        <article class="course">
+                            <div class="course_image">
+                                <img src="./images/course1.jpg">
+                            </div>
+                            <div class="course_info">
+                                <h4>Responsive Social Media Website UI Design</h4>
+                                <p>
+                                    Do your blockchain learning in your own friendly environment
+                                </p>
+                                <a href="course.html" class="btn btn-primary"> Learn more </a>
+                            </div>
+                        </article>
+
+                        <article class="course">
+                            <div class="course_image">
+                                <img src="./images/course2.jpeg">
+                            </div>
+                            <div class="course_info">
+                                <h4>Responsive Smarthome Website Design </h4>
+                                <p>
+                                    Do your blockchain learning in your own friendly environment
+                                </p>
+                                <a href="course.html" class="btn btn-primary"> Learn more </a>
+                            </div>
+                        </article>
+
+                        <article class="course">
+                            <div class="course_image">
+                                <img src="./images/course3.jpeg">
+                            </div>
+                            <div class="course_info">
+                                <h4>Responsive Admin Dashboard UI Design</h4>
+                                <p>
+                                    Do your blockchain learning in your own friendly environment
+                                </p>
+                                <a href="course.html" class="btn btn-primary"> Learn more </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+<!------------------------END OF THE SECTION COURSES-------------------------->
+
+
+<!------------------------START OF THE SECTION FREQUENTLY ASKED QNS-------------------------->
+
+        <section class="faqs">
+            <h2> Frequently Asked Questions</h2>
+            <div class="container faqs_container">
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq">
+                    <div class="faq_icon"><i class="uil uil-plus"></i></div>
+                    <div class="question_answer">
+                        <h4>How do I know the right courses for me ?</h4>
+                        <p>
+                            Do your blockchain learning in your own friendly environment
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+<!------------------------END OF THE SECTION FREQUENTLY ASKED QNS-------------------------->
+
+<!------------------------START OF THE SECTION STUDENTS TESTIMONIALS-------------------------->
+    <section class="container testimonials_container mySwiper">
+        <h2>Students Testimonial</h2>
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./images/avatar6.png">
+                </div>
+                <div class="testimonial_info">
+                    <h5>Krishnan</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial_body">
+                    <P>
+                        Do your blockchain learning in your own friendly environment
+                    </P>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./images/avatar1.png">
+                </div>
+                <div class="testimonial_info">
+                    <h5>Malini</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial_body">
+                    <p>
+                        Do your blockchain learning in your own friendly environment
+                    </p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./images/avatar2.png">
+                </div>
+                <div class="testimonial_info">
+                    <h5>Surya</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial_body">
+                    <p>
+                        Do your blockchain learning in your own friendly environment
+                    </p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./images/avatar3.png">
+                </div>
+                <div class="testimonial_info">
+                    <h5>Priya</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial_body">
+                    <p>
+                        Do your blockchain learning in your own friendly environment
+                    </p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./images/avatar4.jpg">
+                </div>
+                <div class="testimonial_info">
+                    <h5>Gowtham Vasudev menon</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial_body">
+                    <p>
+                        Do your blockchain learning in your own friendly environment
+                    </p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./images/avatar5.png">
+                </div>
+                <div class="testimonial_info">
+                    <h5>Shruthi</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial_body">
+                    <p>
+                        Do your blockchain learning in your own friendly environment
+                    </p>
+                </div>
+            </article>
+            
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!------------------------END OF THE SECTION STUDENTS TESTIMONIALS-------------------------->
+
+
+    <!------------------------START OF THE SECTION FOOTER-------------------------->
+    <footer class="footer">
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html" class="footer_logo"><h4>COURSE UP</h4></a>
+                <p>
+                    Do your blockchain learning in your own friendly environment
+                </p>
+            </div>
+
+            <div class="footer_2">
+                <h4>Our Concern</h4>
+                <ul class="privacy">
+                    <li> <a href="#">Privacy Policy</a></li>
+                    <li> <a href="#">Terms and conditions</a></li>
+                    <li> <a href="#">Refund Policy</a></li>
+                </ul>
+                
+                <ul class="footer_socials">
+                    <li><a href="#"><i class="uil uil-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="uil uil-instagram-alt"></i></a></li>
+                    <li><a href="#"><i class="uil uil-twitter"></i></a></li>
+                    <li><a href="#"><i class="uil uil-linkedin-alt"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer_3">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>We are here to help you</p>
+                    <p>courseup@gmail.com</p>
+                    <p>+919876543210</p>
+                    <p>A-103,AB-3,Amrita Vishwa Vidyapeetham,Ettimadai,Coimbatore</p>
+
+                </div>
+
             </div>
         </div>
-    </div>
+
+        <div class="footer_copyright">
+            <small> Copyright &copy;COURSE UP Youtube Tutorials </small>
+        </div>
+
+    </footer>
+
+    <!------------------------END OF THE SECTION FOOTER-------------------------->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+
+    <!------------------------JS FOR THE SWIPER STUDENT TESTIMONIAL IN HOMEPAGE ALONE-------------------------->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          //when window width is >=600px 
+          breakpoints: {
+            600: {
+                slidesPerView: 2
+            }
+          }
+        });
+      </script>
 
 </body>
-
 </html>

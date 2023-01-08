@@ -1,0 +1,11 @@
+Main Idea
+
+CSS Variables
+CSS Grid & Flexbox
+BEM(Block ELement modifier)
+CSS units for Responsive design(vh-viewport high,vw-viewport width,fr,%)
+Form submission with spam protection (no backend language)
+CSS Transistion & Animations
+Swiper JS for slides
+CSS Media Queries
+

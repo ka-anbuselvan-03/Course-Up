@@ -1,0 +1,121 @@
+.register {
+    margin: 7rem auto;
+}
+
+.register_container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 50rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+/*====================ASIDE styling==================*/
+
+.register_aside {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.register_image {
+    width: auto;
+}
+.register_aside h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.register_aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/*==========================FORM styling============================*/
+
+.register_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form_name {
+    display: flex;
+    gap: 1.2rem;
+}
+.register_form input[type="text"] {
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+.register_form .btn {
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+
+/*==========================MEDIA QUERIES (TABLETS)============================*/
+
+@media screen and (max-width: 1024px) {
+    .register {
+        padding-bottom: 0;
+    }
+    
+    .register_container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .register_aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    .register_form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+
+/*==========================MEDIA QUERIES (MOBILE)============================*/
+
+@media screen and (max-width: 600px) {
+    .register_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .register_form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form_name {
+        flex-direction: column;
+    }
+
+    .form_name input[type="text"] {
+        width: 100%;
+    }
+}
