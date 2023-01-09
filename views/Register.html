@@ -61,32 +61,43 @@
             </p>
 
            
-            <form action="/sign_up"  class="register_form" method="post">
+            <form action="./index.html" id="register_form" class="register_form">
 
+                <div class="input-control">
                 <label for="firstname"><b>First name</b></label>
-                <input type="text" name="FirstName" placeholder="First Name" id="FirstName" required>
-                    
+                <input type="text" name="First Name" placeholder="First Name">
+                <div class="error"></div>
+                </div>
+                
+                <div class="input-control">
                 <label for="lastname"><b>Last name</b></label>
-                <input type="text" name="LastName" placeholder="Last Name" id="LastName" required>
+                <input type="text" name="Last Name" placeholder="Last Name">
+                <div class="error"></div>
+                </div>
 
+                <div class="input-control">
                 <label for="username"><b>Username</b></label>
-                <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                <input type="text" id="username" placeholder="Enter Username">
+                <div class="error"></div>
+                </div>
 
+                <div class="input-control">
                 <label for="email"><b>Email</b></label>
-                <input type="text" id="email" name="email" placeholder="Enter email" required>
+                <input type="text" id="email" placeholder="Enter email">
+                <div class="error"></div>
+                </div>
 
+                <div class="input-control">
                 <label for="password"><b>Password</b></label>
-                <input type="password" id="password" name="password" placeholder="Enter password" required>
-
-                <label for="password2"><b>Password</b></label>
-                <input type="password" id="password2" name ="password2" placeholder="Enter confirm password"required>
-
-
-                <!--<label for="password"><b>Password</b></label>
                 <input type="password" id="password" placeholder="Enter password">
+                <div class="error"></div>
+                </div>
 
-                <label for="password2"><b>Confirm Password</b></label>
-                <input type="password" id="password2" placeholder="Enter confirm password">-->
+                <div class="input-control">
+                <label for="password2"><b>Password</b></label>
+                <input type="password" id="password2" placeholder="Enter confirm password">
+                <div class="error"></div>
+                </div>
 
                 <p>Already registered?<a href="Login.html" style="color: #e74c3c;">Login here</a></p>
 
