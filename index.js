@@ -23,10 +23,10 @@ app.post('/sign_up', function(req,res){
 	
 	var FirstName = req.body.FirstName;
 	var LastName = req.body.LastName;
-	var username = req.body.usename;
+	var username = req.body.username;
 	var email = req.body.email;
 	var password = req.body.password;
-	var password2 = req.body.password2;
+	
 	
 
 	var data = {
@@ -35,14 +35,14 @@ app.post('/sign_up', function(req,res){
 		"username": username,
 		"email":email,
 		"password":password,
-		"password2":password2,
+		
 		
 	}
 
 app.use('/public',express.static(__dirname +"/public"));
 db.collection('details').insertOne(data,function(err, collection){
 		if (err) throw err;
-		console.log("Record inserted Successfully");
+		console.log("Record inserted Successfully mongodb la poi check pannu thala :)");
 			
 	});
 		
