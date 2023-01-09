@@ -1,0 +1,277 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar
+{
+   width: 10px;
+}
+body::-webkit-scrollbar-thumb
+{
+   height: 80px;
+   background: #375666;
+   border: 8px solid transparent;
+   border-radius: 12px;
+}
+body::-webkit-scrollbar-thumb:active
+{
+    background: #003349;
+}
+body
+{
+    font-family: sans-serif;
+    background: #002333;
+}
+li
+{
+    list-style: none;
+}
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5%;
+    min-height: 100vh;
+}
+.title
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: #dcdee1;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.container #main-Video
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    outline: none;
+}
+
+.playlistBx
+{
+    position: relative;
+    height: 100%;
+    margin: 0 10px 0 10px;
+    /* border: 2px solid green; */
+}
+.playlist
+{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    border-top: 1px solid #dcdee1;
+}
+.playlist::-webkit-scrollbar
+{
+   width: 0px;
+}
+.playlistBx .row .AllLessons
+{
+   display: block;
+   text-align: left;
+   color: #dcdee1;
+   font-size: 15px;
+   font-weight: 700;
+   margin-left: 40px;
+   line-height: 40px;
+}
+.playlist li
+{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   color: #dcdee1;
+   cursor: pointer;
+   border: 1px solid transparent;
+   padding: 15px 20px;
+   border-radius: 5px;
+}
+.playlist li:hover
+{
+    border: 0.5px solid #375666;
+}
+.playlist li .row span
+{
+    font-size: 15px;
+    font-weight: 400;
+    color: #dcdee1;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+}
+.playlist li .row span::before
+{
+    content: '\f01d';
+    font-family: FontAwesome;
+    color: #dcdee1;
+    margin-right: 15px;
+    font-size: 20px;
+}
+ul li.playing .row span::before
+{
+    content: '\f28c';
+    font-family: FontAwesome;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.playlist li.playing .row span
+{
+   color: #fff;
+}
+.playlist li span.duration
+{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    color: #dcdee1;
+    text-align: right;
+}
+.playlist li.playing
+{
+   pointer-events: none;
+   background: #1d3541;
+   border: 0.5px solid #1d3541;
+}
+
+@media(max-width: 1092px){
+    section
+    {
+        padding: 30px 10px;
+    }
+    .container
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        overflow: hidden;
+    }
+    .container #main-Video
+    {
+        height: 100%;
+    }
+    .playlistBx
+    {
+        height: 380px;
+        margin-top: 10px;
+    }
+    .playlist
+    {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow-y: scroll;
+    }
+}
+
+
+
+
+
+/*
+.container_down {
+    position: relative; 
+    margin-top: 2rem; 
+    background: #ffffff36; 
+    width: 450px; 
+    height: 20rem; 
+    padding: 5rem; 
+    text-align: left; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    z-index: 2;
+}
+     
+.container input, container button { 
+    height: 40px; 
+    width: 90%; 
+    border-radius: 50px; 
+    font-size: 18px;
+    background-color: brown;
+}
+
+.container input {
+    border: 2px solid #0094a236; 
+    padding-left: 12px;
+    margin-bottom: 12px; 
+    transition: .4s;
+}
+     
+.container input:focus {
+    border: 2px solid #00bcd4;
+}
+     
+.container button {
+    Cursor: pointer; 
+    background: #00bcd4; 
+    letter-spacing: 1px; 
+    transition: 40ms;
+}
+
+container button: hover {
+    background: #FF8427;
+}
+*/
+ 
+/*
+ul {
+    position: absolute; 
+    width: 450px; 
+    height: fit-content; 
+    background: #0094a236; 
+    margin-top: 140px; 
+    padding-top: 90px; 
+    border-radius: 20px; 
+    transition: .4s;
+}
+ 
+ul li {
+    padding: 15px;
+}
+ 
+ul li span {
+    display: flex;
+}
+ 
+ul li span p:nth-child(1) { 
+    text-transform: uppercase; 
+    font-size: 20px;
+    font-weight: 500; 
+    color: #ffffff; 
+    margin-right: 10px;
+}
+
+ul li span p:nth-child(2) { 
+    color: #ffffff;
+    font-size: 18px; 
+    font-weight: 200; 
+    margin-top: -3px;
+}
+     
+ul li p:nth-child(2) { 
+    color: #f5f5f5; 
+    font-size: 19px; 
+    font-weight: 400; 
+    padding-top: 5px;
+}
+*/
