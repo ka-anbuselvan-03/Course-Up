@@ -42,7 +42,7 @@ app.post('/sign_up', function(req,res){
 app.use('/public',express.static(__dirname +"/public"));
 db.collection('details').insertOne(data,function(err, collection){
 		if (err) throw err;
-		console.log("Record inserted Successfully mongodb la poi check pannu thala :)");
+		console.log("Record inserted Successfully mongodb la poi check pannu thala :");
 			
 	});
 		
